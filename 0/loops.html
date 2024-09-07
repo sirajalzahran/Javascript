@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" class="mt-20">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Loops</title>
+</head>
+<body>
+    <div class="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md space-y-4 mb-20">
+        <h3 class="text-black text-start col-span-2 whitespace-pre-wrap">Vowel Letters: (A, E, I, O, U)</h3>
+        <div class="flex gap-4">
+        <input type="text" id="message-input" placeholder="Enter any text" class="border-2 border-black rounded-md px-2 py-1 shadow-md w-full">
+        <button type="submit" id="submit-btn" class="rounded-md bg-black px-2 py-1 hover:bg-neutral-300 hover:text-black font-semibold transition-all text-white">Submit</button>
+        </div>
+        <h3 id="output" class="text-black font-bold text-2xl text-center col-span-2 whitespace-pre-wrap"></h3>
+    </div>
+
+    <div class="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md space-y-4 mb-20">
+        <h3 class="text-black text-start col-span-2 whitespace-pre-wrap">Find Students</h3>
+        <div class="flex gap-4">
+        <input type="text" id="student-input" placeholder="Enter student name" class="border-2 border-black rounded-md px-2 py-1 shadow-md w-full">
+        <button type="submit" id="search-btn" class="rounded-md bg-black px-2 py-1 hover:bg-neutral-300 hover:text-black font-semibold transition-all text-white">Search</button>
+        </div>
+        <h3 id="school" class="text-black text-center col-span-2 whitespace-pre-wrap"></h3>
+        <h3 id="results" class="text-black text-center col-span-2 whitespace-pre-wrap"></h3>
+    </div>
+</body>
+<script>
+    
+    // for (var i = 0; i < 101; i++){
+    //     console.log(i)
+    // }
+
+
+    // while
+    // var i = 0
+
+    // console.log("from while")
+    // while (i <= 10){
+    //     console.log(i)
+    //     i = i + 1
+    // }
+    
+    // // do while
+    // var x = 0
+
+    // console.log("from do while")
+    // do {
+    //     console.log(x)
+    //     x = x + 1 // or x += 1
+    // } while (x <= 10);
+
+    var school = ["Siraj","Mohammad","Majed","Fayez"]
+    for(var memberIndex = 0; memberIndex <= school.length - 1; memberIndex++){
+        document.getElementById("school").innerHTML += school[memberIndex] + "  "        
+    }
+    
+    document.getElementById("search-btn").addEventListener("click", function(){
+        var name = document.getElementById("student-input").value.toLowerCase();
+        document.getElementById("student-input").value = "";
+        var index = 0
+        while(index <= school.length - 1){
+            var student = school[index]
+            var loweredStudent = student.toLowerCase();
+            document.getElementById("results").innerHTML = `${name} is not in the school`
+            index += 1;
+            if(name != loweredStudent){
+                continue;
+            }
+            document.getElementById("results").innerHTML = `${name} is in the school`
+            break;
+        }
+
+
+    //     for(var student of school){
+        //         var loweredStudent = student.toLowerCase();
+        //         if(name == loweredStudent){
+    //             document.getElementById("results").innerHTML = `${name} is in the school`
+    //             break;
+    //         }
+    //         else{
+    //             document.getElementById("results").innerHTML = `${name} is not in the school`
+    //         }
+    //     }
+    })
+    
+
+    
+        
+    
+    // var isFound = false;
+    // for(var student of school){
+    // var loweredStudent = student.toLowerCase();
+    // if(name == loweredStudent){
+    // isFound = true
+    // }
+    // }
+    // if (isFound == true){
+    //  document.getElementById("results").innerHTML = `${name} is in the school`
+    // }else{
+    //  document.getElementById("results").innerHTML = `${name} is not in the school`
+    // }
+    // })
+
+
+
+    // var school = ["T.Siraj","T.Mohammad","Majed","Fayez"]
+
+    // for (var memberIndex = 0; memberIndex <= school.length -1; memberIndex++){
+    //     if(school[memberIndex][0] == "T"){
+    //         document.getElementById("school").innerHTML += school[memberIndex] + "\n"
+    //     }
+    // }
+
+
+    // var school = ["T.Siraj","T.Mohammad","Majed","Fayez"]
+
+    // for (var memberIndex = 0; memberIndex <= school.length -1; memberIndex++){
+    //     if(school[memberIndex][0] == "T"){
+    //         document.getElementById("school").innerHTML += school[memberIndex] + "\n"
+    //     }
+    // }
+
+    // document.getElementById("submit-btn").addEventListener("click", function() {
+    //     document.getElementById("output").innerHTML = "";
+    //     var message = document.getElementById("message-input").value;
+    //     const vowels = ["a", "e", "i", "o", "u"];
+    //     for(var char of message){
+    //         var lowerChar = char.toLowerCase();
+    //         if(!vowels.includes(lowerChar)){
+    //             message = `${char}\n`;
+    //             document.getElementById("output").innerHTML += message;
+    //             document.getElementById("message-input").value = "";
+    //         }
+    //     }
+    // });
+
+    // For loop
+    // var name = "Ostora ya khaye"
+    // for(var x = 0; x < name.length; x++){
+    //     console.log(name[x])
+    // }
+
+    // for(var i in name){
+    //     console.log(name[i])
+    // }
+
+    // for(var i of name){
+    //     console.log(i)
+    // }
+
+    // for (var number = 0; number <= 30; number++){
+    //     message = `10 x ${number} = ${number*10}\n`
+    //     document.getElementById('output').innerHTML += message;
+    // }
+    // console.log("Done")
+
+    // for (var number = 0; number <= 30; number++){
+    //     console.log(`10 x ${number} = ${number*10}`)
+    // }
+    // console.log("Done")
+
+    // for (var number = 0; number <= 100; number++){
+    //     if(number % 2 == 0){
+    //         console.log(number)
+    //     }
+    // }
+    // console.log("Done")
+
+    // for (var i = 0; i <= 100; i++){
+    //     console.log(i)
+    // }
+    // console.log("Done")
+</script>
+</html>

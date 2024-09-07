@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If Statement</title>
+</head>
+<body>
+    <h1 id="result"></h1>
+</body>
+<script>
+    var age = 40
+    var health = "strong"
+    let message;
+
+    switch (true){
+        case (age >= 60):
+            console.log("Old")
+            break
+        case (age >= 40):
+            console.log("Mid")
+            break
+        default:
+            console.log("Young")
+    }
+
+
+    // switch (health){
+    //     case("strong"):
+    //         console.log("Your health is good")
+    //         break
+    //     case("weak"):
+    //         console.log("Your need to work on your health")
+    //         break
+    //     default:
+    //         console.log("good")
+    // }
+
+    // if (age >= 60) {
+    //     message = `Old and his age is: ${age}`;
+    // } else if (age >= 40) {
+    //     message = `Mid and his age is: ${age}`;
+    // } else {
+    //     message = `Young and his age is: ${age}`;
+    // }
+
+    // document.getElementById("result").textContent = message;
+
+    // if(age >= 60 ){
+    //     console.log("Old and his age is: " + age)
+    // }
+    // else if(age < 60 && age > 40){
+    //     console.log("Mid and his age is: " + age)
+    // }
+    // else{
+    //     console.log("Young and his age is: " + age)
+    // }
+</script>
+</html>

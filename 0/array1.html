@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" class="mt-20">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Array 1</title>
+</head>
+<body>
+    <div class="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md space-y-4 mb-20">
+        <input type="text" id="student-name-input" placeholder="Enter student name" class="border-2 border-black rounded-md px-2 py-1 shadow-md w-full">
+        <div class="flex max-w-sm mx-auto gap-4">
+        <button type="submit" id="submit-btn" class="rounded-md bg-black w-full px-2 py-1 hover:bg-neutral-300 hover:text-black font-semibold transition-all text-white">Submit</button>
+        <button type="delete" id="delete-btn" class="rounded-md bg-black w-full px-2 py-1 hover:bg-neutral-300 hover:text-black font-semibold transition-all text-white">Delete</button>
+        </div>
+        <h3 id="students" class="text-black text-center col-span-2 whitespace-pre-wrap"></h3>
+    </div>
+</body>
+<script>
+
+    var students =[
+        ["Siraj","Mohammad","Majed","Fayez"],
+        ["Ahmad","Ali","Karim"],
+        ["Khaled","Samir"]
+    ]
+    // var class3 = students[1]
+    // console.log(class3)
+    // console.log(students[0][1])
+
+    document.getElementById("students").innerHTML = students
+
+</script>
+</html>

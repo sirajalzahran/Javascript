@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>JavaScript</title>
+</head>
+
+<body>
+  <div class="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md space-y-4 mb-20">
+    <h2 class="text-2xl font-bold text-gray-900 flex justify-center">
+        JavaScript Operations
+    </h2>
+    <h3 id="output" class="text-gray-700 whitespace-pre-wrap"></h3>
+    <h2 class="text-2xl font-bold text-gray-900 flex justify-center">
+        JavaScript Functions
+    </h2>
+    <h3 id="functions" class="text-gray-700 whitespace-pre-wrap">hello my friend</h3>
+    <div class="grid grid-cols-[70%_25%] gap-6 max-w-md">
+        <input type="text" id="string-input" placeholder="Enter any text" class="border-2 border-black rounded-md px-2 py-1 shadow-md w-full">
+        <button type="submit" id="submit-btn" class="rounded-md bg-black px-2 py-1 hover:bg-neutral-300 hover:text-black font-semibold transition-all text-white">Submit</button>
+        <h3 id="result" class="text-gray-700 col-span-2 whitespace-pre-wrap"></h3>
+        <div id="loader" class="border-4 border-gray-300 border-l-black rounded-full w-6 h-6 animate-spin hidden mx-auto"></div>
+    </div>
+  </div>
+</body>
+
+<script>
+    // Operations section
+    var x = 10;
+    var y = 4;
+    var Sum = x + y;
+    var Sub = x - y;
+    var Mult = x * y;
+    var Div = x / y;
+    var Mod = x % y;
+
+    var message = `First number is: ${x}\nSecond number is: ${y}
+    \nMaximum is: ${Math.max(x,y)}\nMinimum is: ${Math.min(x,y)}
+    \nDoes ${x} equal to ${y}: ${x == y}\nDoes ${x} less than ${y}: ${x <= y}\nDoes ${x} greater than ${y}: ${x >= y}
+    \nSum is: ${Sum}\nSub is: ${Sub}
+    \nMult is: ${Mult}\nDiv is: ${Div}
+    \nMod is: ${Mod}`;
+    document.getElementById('output').textContent = message;
+
+    // Function section
+    var functions = document.getElementById("functions").innerHTML;
+    document.getElementById("submit-btn").addEventListener("click", function(){
+        var infield = document.getElementById("string-input").value;
+        var resultElement = document.getElementById("result");
+        var loader = document.getElementById("loader");
+        loader.classList.remove("hidden");
+        setTimeout(function() {
+            loader.classList.add("hidden");
+            resultElement.innerHTML = infield;
+        }, 500);
+    });
+
+    var functionOutput = `${functions}
+    \nTypeof function: ${typeof functions}
+    \nSubstring function: ${functions.substring(0, 8)}
+    \nReplace function: ${functions.replace("hello", "good bye")}
+    \nLowerCase function: ${functions.toLowerCase()}
+    \nUpperCase function: ${functions.toUpperCase()}
+    \nChartAt function: ${functions.charAt(10)}
+    \nReversed function: ${functions.split("").reverse("").join("")}
+    `;
+    document.getElementById('functions').innerHTML = functionOutput;
+</script> 
+</html>
