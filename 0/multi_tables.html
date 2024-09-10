@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Multiplication Tables</title>
+</head>
+<body>
+    <div class="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md space-y-4 mb-20">
+        <h2 id="results" class="text-black text-center col-span-2 whitespace-pre-wrap"></h2>
+    </div>
+</body>
+<script>
+    for(var i = 1 ; i <= 10 ; i++){
+        document.getElementById('results').innerHTML += `<h1> Multiplication Table of ${i} </h1>`
+        for(var j = 1; j <= 10 ; j++){
+            console.log(`${i} X ${j} = ${i*j}`)
+            document.getElementById('results').innerHTML += `${i} X ${j} = ${i*j} <br>`
+        }
+        document.getElementById("results").innerHTML += `<hr>`
+    }
+</script>
+</html>
