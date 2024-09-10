@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Functions</title>
+</head>
+<body>
+    <div class="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md space-y-4 mb-20">
+        <h2 id="results" class="text-black text-center col-span-2 whitespace-pre-wrap"></h2>
+    </div>
+</body>
+<script>
+    function average(array = [12, 55]){
+        var total = 0
+        for (element of array){
+            total += element
+        }
+        var average = total/array.length
+        return average
+    }
+
+    console.log(average())
+
+    function reverseArray(arr = [20, 10, 50, 60]){
+        var outputArray = []
+        for (element of arr){
+            outputArray.unshift(element)
+        }
+        return outputArray
+    }
+
+    var reversedArray = reverseArray()
+    console.log(reversedArray)
+
+
+    // number1 and number2 are parameters
+    function numberSquared(number1, number2){
+        var results = number1 * number2
+        console.log("The results is " + results)
+    }
+    // 5 and 6 are arguments
+    numberSquared(5, 6)
+
+
+    function printWelcomeMessage(name){
+        console.log("Hello " + name)
+    }
+    printWelcomeMessage("Siraj")
+</script>
+</html>
