@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" class="mt-20">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Array 1</title>
+</head>
+<body>
+    <div class="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md space-y-4 mb-20">
+        
+        <h3 id="students" class="text-black text-center col-span-2 whitespace-pre-wrap"></h3>
+    </div>
+</body>
+<script>
+
+    var students =[
+        ["Siraj","Mohammad","Majed","Fayez"],
+        ["Ahmad","Ali","Karim"],
+        ["Khaled","Samir"]
+    ]
+
+    for (var i = 0; i < students.length; i++){
+
+        var currentClass = students[i]
+        document.getElementById("students").innerHTML += "<br>" + `<h1> class ${Number(i + 1)} </h1>` + "<hr>"
+        for (var j = 0; j < currentClass.length; j++){
+            var currentStudent = currentClass[j]
+            document.getElementById("students").innerHTML += currentStudent + " <br> "
+            console.log(students[i][j])
+        }
+        // }
+        // else if( i == 1){
+        //     document.getElementById("students").innerHTML += "class2" + "<br>" +  students[i] + "<br>"
+        // }
+        // else{
+        //     document.getElementById("students").innerHTML += "class3" + "<br>" + students[i] + "<br>"
+        // }
+    }
+    // var class3 = students[1]
+    // console.log(class3)
+    // console.log(students[0][1])
+</script>
+</html>
