@@ -134,3 +134,51 @@
 // console.log(a);
 // console.log(b);
 
+// const dog = {
+//     name: "Max",
+//     age: 5,
+//     eyeColor: "Blue"
+// };
+
+// for (const key in dog) {
+//     console.log(dog[key]);
+// }
+
+// const keys = Object.keys(dog);
+// // console.log(keys);
+
+// const values = Object.values(dog);
+// // console.log(values);
+
+// const entries = Object.entries(dog);
+// console.log(entries);
+
+// for ( const key of Object.keys(dog)) {
+//     console.log(key);
+// }
+
+// for (const value of Object.values(dog)){
+//     console.log(value);
+// }
+ 
+// for (const entry of Object.entries(dog)){
+//     console.log(entry);
+// }
+
+// let min = 1;
+// let max = 10;
+
+// const randomNum =  Math.round( Math.random() * (max - min) + min);
+
+// console.log(randomNum);
+
+// const name = "Steven";
+// console.log(typeof name);
+
+// const anotherName = new String("Joe");
+// console.log(typeof anotherName);
+
+// let sentence = "A new sentence.";
+// const doesIncludeNew = sentence.includes("new");
+// console.log(doesIncludeNew);
+
