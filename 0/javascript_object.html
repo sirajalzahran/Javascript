@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Objects</title>
+
+    <style>
+        table, th, td{
+            border: 1px, solid white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body style="padding: 0; margin: 0">
+    <div style="background-color: blue; width: 100%; height: 100vh; display: flex; justify-content: center; align-items: center;">
+        <table  id="students" style="width: 50%; font-size: 20px; color: white;">
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Year</th>
+            </tr>
+        </table>
+    </div>
+</body>
+<script>
+    // let student = {
+    //     firstName: "Khaled",
+    //     lastName: "Moustafa",
+    //     age: 15,
+    //     year: "2000",
+        
+    //     printFullName: function(){
+    //         console.log(this.name);
+    //     }
+    // }
+    
+    function printFullName(st){
+        console.log(st.firstName + " " + st.lastName);
+    }
+
+    let students = [
+    {
+        name: {
+            firstName: "Khaled",
+            lastName: "Moustafa",
+        },
+        age: 15,
+        year: "2011",
+        
+        printFullName: function(){
+            console.log(this.name);
+        }
+    },
+    {
+        name: {
+            firstName: "Samir",
+            lastName: "Ali",
+        },
+        age: 13,
+        year: "2005",
+        
+        printFullName: function(){
+            console.log(this.name);
+        }
+    },
+    {
+        name: {
+            firstName: "Ahmad",
+            lastName: "Safe",
+        },
+        age: 11,
+        year: "2010",
+        
+        printFullName: function(){
+            console.log(this.name);
+        }
+    }];
+
+    for (st of students){
+        let content = `<tr>
+                            <td>${st.name.firstName} ${st.name.lastName}</td> 
+                            <td>${st.age}</td> 
+                            <td>${st.year}</td> 
+                        </tr>`
+        document.getElementById("students").innerHTML += content;
+        // console.log(st.firstName, st.lastName, st.age,st.year)
+    }
+
+    // console.log(students[0].firstName)
+    // console.log(students[0].printFullName())
+
+    // student.year = "2008"
+
+    // student.grade = "A+"
+
+    // console.log(student.year)
+    // console.log(student.grade)
+
+    // console.log(student)
+    // console.log(student.firstName)
+
+    // student.printFullName()
+    // printFullName(student)
+
+</script>
+</html>
