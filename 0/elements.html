@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elements</title>
+</head>
+<body>
+    <div style="
+        color: white; 
+        width: 100%; 
+        font-size: 20px; 
+        height: 50vh; 
+        background-color: rgba(2 , 21, 22, 2);">
+        <ul id="ul">
+            <li>Jack</li>
+            <li id="david-li">David</li>
+            <li>John</li>
+        </ul>
+    </div>
+</body>
+<script>
+    document.getElementById("ul").innerHTML += "<li>Kudos</li>"
+
+    let liElement = document.createElement("li")
+    let textContent = document.createTextNode("Kylian")
+    liElement.appendChild(textContent)
+    document.getElementById("ul").appendChild(liElement)
+
+    document.getElementById("ul").removeChild(liElement)
+
+    let DavidNode = document.getElementById("david-li")
+    document.getElementById("ul").removeChild(DavidNode)
+</script>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge</title>
+</head>
+<body>
+    <div style="color: white; width: 100%; font-size: 20px; height: 50vh; background-color: rgba(2 , 21, 22, 2);">
+        
+        <div style="display: flex; justify-content: center; align-items: center; height: 50%;">
+            <div style="height: 20px;">
+                <input onchange="nameInputChange(this)" type="text" id="name-input" style="height: 100%; width: 300px; border: none;">
+                <button id="submit-btn" style="cursor: pointer; border: none; background-color: white; height: 23px; width: 50px;">
+                    Send
+                </button>
+            </div>
+        </div>
+
+        <div style="text-align: center;">
+            <h1 id="currentName"></h1>
+        </div>
+
+    </div>
+
+    <div style="color: rgba(2 , 21, 22, 2); width: 100%; font-size: 20px; height: 50vh; background-color: white;">
+        
+        <h2 id="message" style="display: flex;justify-content: center;">
+            Please enter something
+        </h2>
+        
+    </div>
+</body>
+<script>
+    let messageElement = document.getElementById("message");
+    let isSubmitted = false;
+   
+    function nameInputChange(input){
+        document.getElementById("currentName").innerHTML = input.value
+    }
+
+    document.getElementById("submit-btn").addEventListener("click", function(){
+        if(!isSubmitted){
+            isSubmitted = true;
+           let child = messageElement.firstChild
+           messageElement.removeChild(child)
+        }
+
+        let value = document.getElementById("name-input").value
+
+        let textNode = document.createTextNode(value)
+            messageElement.appendChild(textNode)
+
+        let brElement = document.createElement("br")
+            messageElement.appendChild(brElement)
+    })
+
+    messageElement.addEventListener("mouseover", function(){
+        if (isSubmitted){
+            this.style.background = "green"
+        } else {
+            this.style.background = "red"  
+        }
+    })
+
+    messageElement.addEventListener("mouseout", function(){
+        this.style.background = "white"
+    })
+</script>
+</html>

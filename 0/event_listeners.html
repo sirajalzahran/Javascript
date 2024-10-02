@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listeners</title>
+</head>
+<body>
+    <div style="
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        width: 100%; 
+        font-size: x-large;
+        ">
+        <h1 id="title"
+        style="cursor: pointer;"
+        onclick="alert('Hello'),
+        console.log('hello world')">
+        My Title</h1>
+    </div>
+    <div>
+        <h2 id="title-2">Test</h2>
+    </div>
+
+    
+</body>
+<script>
+        document.getElementById("title").addEventListener("click", function(){
+            document.getElementById("title-2").innerHTML = "Hello";
+            // this.innerHTML = "Title";
+        });
+
+        // document.getElementById("title").addEventListener("mouseover", function(){
+        //     document.getElementById("title-2").innerHTML = "Hello";
+        //     // this.innerHTML = "Title";
+        // });
+
+        document.getElementById("title").addEventListener("mouseout", function(){
+            this.innerHTML = "Hello";
+            // this.innerHTML = "Title";
+        });
+</script>
+</html>
