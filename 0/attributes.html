@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attributes</title>
+</head>
+<body>
+    <div style="
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        width: 100%; 
+        font-size: x-large;
+        ">
+        <h1 id="title">My Title</h1>
+
+        <input value="input" type="text" x="My Input">
+    </div>
+    
+</body>
+<script>
+    // document.getElementById("title").innerHTML = "Hello Mate";
+
+    // let content = document.getElementById("title").innerHTML;
+    // document.getElementsByTagName("input")[0].setAttribute("value", content);
+
+    // document.getElementsByTagName("input")[0].setAttribute("type", "submit");
+
+    // console.log(document.getElementsByTagName("input")[0].getAttribute("x"));
+
+    document.getElementById("title").style.backgroundColor = "red";
+    document.getElementById("title").style.boxShadow = "0px 5px 3px rgba(0, 0, 0, 0.5)";
+
+    console.log(document.getElementById("title").style.boxShadow);
+
+</script>
+</html>
