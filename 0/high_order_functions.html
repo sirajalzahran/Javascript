@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map - Filter - Reduce</title>
+</head>
+<body>
+    
+</body>
+<script>    
+    var arr = [10, 20, 30, 40, 50]
+
+    // var myArray = []
+    // for (element of arr){
+    //     myArray.push(element*10)
+    // }
+    // console.log(myArray)
+
+    // Map
+    // let myArr = arr.map(function(element){
+    //     return element*10
+    // })
+
+    // console.log(myArr)
+
+    // Filter
+    // let myArr = arr.filter(function(element){
+    //     if(element > 30){
+    //         return true;
+    //     }
+    //         return false;
+    // })
+
+    // let myArr = arr.filter(function(element){
+    //     return element > 30
+    // })
+
+    // console.log(myArr)
+
+    // Reduce
+    // var total = arr.reduce(function(prevValue, currentValue){
+    //     return prevValue + currentValue;
+    // })
+
+    // console.log(total)
+
+
+    function cumulativeAddition(arr) {
+        let total = arr.reduce(function(prev, current) {
+            return prev + current;
+        }); 
+
+        let array = [total, arr.length];
+        return array;
+    }
+
+    console.log(cumulativeAddition(arr));
+
+
+</script>
+</html>
