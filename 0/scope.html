@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // if (false){
+    //     var x = 20;
+    // }
+
+    // for (var i = 0; i < 6; i++){
+    //     var x = 20;
+    // }
+
+    // console.log(x)
+    
+    // global scope
+    var y = 0;
+
+    test = () => {
+        // local scope
+        y = 10
+    }
+
+    test()
+    console.log(y)
+</script>
+</html>
